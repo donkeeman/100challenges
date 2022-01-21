@@ -7,12 +7,15 @@
         <title>Border-radius Previewer</title>
     </head>
     <body>
-        <h2>Border-radius Previewer</h2>
-        <hr>
-        <p>Preview your border-radius!</p>
-        <div id="preview"></div>
-        <div>
-            <form>
+        <header>
+            <h2>Border-radius Previewer</h2>
+            <hr>
+        </header>
+        <section>
+            <p>Preview your border-radius!</p>
+            <div id="preview"></div>
+            <div>
+                <form>
                     <label>top-left(horizonal) <input id="tlh", type="number", value="0"></label>
                     <br>
                     <label>top-right(horizonal) <input id="trh", type="number", value="0"></label>
@@ -29,9 +32,10 @@
                     <label>bottom-left(vertical) <input id="blv", type="number", value="0"></label>
                     <br>
                     <label>bottom-right(vertical) <input id="brv", type="number", value="0"></label>
-            </form>
-            <pre id="cssPre"></pre>
-            <button id="copy">Copy</button>
-        </div>
+                </form>
+                <pre id="cssPre"></pre>
+                <button id="copy">Copy</button>
+            </div>
+        </section>
     </body>
 </html>
