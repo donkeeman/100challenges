@@ -1,0 +1,33 @@
+document, body{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    float: left;
+    border: 1px solid black;
+    width: 10%;
+    height: 100%;
+    background-color: lightgreen;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+    color:inherit;
+}
+
+img{
+    float: left;
+}
+
+section, article{
+    float:left;
+    text-align: left;
+    padding: 0 1%;
+}
