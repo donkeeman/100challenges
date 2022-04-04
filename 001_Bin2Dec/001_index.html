@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link href="001_style.css", type="text/css", rel="stylesheet">
-        <script src="001_script.js" defer></script>
-        <title>Bin2Dec</title>
-    </head>
-    <body>
-        <header>
-            <h2>Bin2Dec</h2>
-            <hr>
-        </header>
-        <section>
-            <p>Enter your binary digits, and click 'convert' button!</p>
-            <form>
-                <div>
-                    <label>
-                        Binary
-                        <br>
-                        <input id="bin", type="text">
-                    </label>
-                </div>
-                <div>
-                    <input id="convert", type="button", value="convert">
-                </div>
-                <div>
-                    <label>
-                        Decimal
-                        <br>
-                        <input id="dec", type="number", readonly>
-                    </label>
-                </div>
-            </form>
-            <p id="error">Binary input must be entered 0 or 1!</p>
-        </section>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="001_style.css", type="text/css", rel="stylesheet">
+    <script src="001_script.js" defer></script>
+    <title>Bin2Dec</title>
+</head>
+<body>
+    <header class="bodyHeader">
+        <h1>Bin2Dec</h1>
+    </header>
+    <main>
+        <h3 class="mainHeader">Enter your binary digits, and click 'convert' button!</h3>
+        <form action="" class="bin2decForm">
+            <div class="numberDiv">
+                <label for="binInput">
+                    Binary
+                </label>
+                <br>
+                <input type="text" id="binInput">
+            </div>
+            
+            <button type="button" id="convertButton" value="convert">Convert</button>
+
+            <div class="numberDiv">
+                <label for="decInput">
+                    Decimal
+                </label>
+                <br>
+                <input type="number" id="decInput" readonly>
+            </div>
+        </form>
+        <p class="message" id="errorMessage">Binary input must be entered 0 or 1!</p>
+    </main>
+</body>
 </html>
