@@ -16,12 +16,12 @@ pre{
     overflow: auto;
 }
 
-form{
+.borderForm{
     display: inline-block;
     text-align: right;
 }
 
-pre{
+.cssPre{
     border: 1px solid black;
     display: flex;
     width:auto;

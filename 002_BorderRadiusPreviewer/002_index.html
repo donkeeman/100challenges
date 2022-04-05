@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
         <meta charset="utf-8">
-        <link href="002_style.css", type="text/css", rel="stylesheet">
+        <link href="002_style.css" type="text/css" rel="stylesheet">
         <script src="002_script.js" defer></script>
         <title>Border-radius Previewer</title>
     </head>
     <body>
         <header>
-            <h2>Border-radius Previewer</h2>
+            <h1>Border-radius Previewer</h1>
             <hr>
         </header>
         <section>
-            <p>Preview your border-radius!</p>
+            <h2>Preview your border-radius!</h2>
             <div id="preview"></div>
             <div>
-                <form>
-                    <label>top-left(horizonal) <input id="tlh", type="number", value="0"></label>
+                <form class="borderForm">
+                    <label>top-left(horizonal) <input id="tlh" type="number" value="0"></label>
                     <br>
-                    <label>top-right(horizonal) <input id="trh", type="number", value="0"></label>
+                    <label>top-right(horizonal) <input id="trh" type="number" value="0"></label>
                     <br>
-                    <label>bottom-left(horizonal) <input id="blh", type="number", value="0"></label>
+                    <label>bottom-left(horizonal) <input id="blh" type="number" value="0"></label>
                     <br>
-                    <label>bottom-right(horizonal) <input id="brh", type="number", value="0"></label>
+                    <label>bottom-right(horizonal) <input id="brh" type="number" value="0"></label>
                 </form>
-                <form>
-                    <label>top-left(vertical) <input id="tlv", type="number", value="0"></label>
+                <form class="borderForm">
+                    <label>top-left(vertical) <input id="tlv" type="number" value="0"></label>
                     <br>
-                    <label>top-right(vertical) <input id="trv", type="number", value="0"></label>
+                    <label>top-right(vertical) <input id="trv" type="number" value="0"></label>
                     <br>
-                    <label>bottom-left(vertical) <input id="blv", type="number", value="0"></label>
+                    <label>bottom-left(vertical) <input id="blv" type="number" value="0"></label>
                     <br>
-                    <label>bottom-right(vertical) <input id="brv", type="number", value="0"></label>
+                    <label>bottom-right(vertical) <input id="brv" type="number" value="0"></label>
                 </form>
-                <pre id="cssPre"></pre>
-                <button id="copy">Copy</button>
+                <pre class="cssPre" id="cssPre"></pre>
+                <button id="copyButton">Copy</button>
             </div>
         </section>
     </body>

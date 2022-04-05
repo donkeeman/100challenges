@@ -1,20 +1,20 @@
-var previewDiv = document.getElementById("preview");
+let previewDiv = document.getElementById("preview");
 
 previewDiv.style.width = previewDiv.style.height = window.innerWidth * 0.3 + "px";
 previewDiv.style.backgroundColor = "green";
 
-var tlh = document.getElementById("tlh");
-var trh = document.getElementById("trh");
-var blh = document.getElementById("blh");
-var brh = document.getElementById("brh");
-var tlv = document.getElementById("tlv");
-var trv = document.getElementById("trv");
-var blv = document.getElementById("blv");
-var brv = document.getElementById("brv");
+let tlh = document.getElementById("tlh");
+let trh = document.getElementById("trh");
+let blh = document.getElementById("blh");
+let brh = document.getElementById("brh");
+let tlv = document.getElementById("tlv");
+let trv = document.getElementById("trv");
+let blv = document.getElementById("blv");
+let brv = document.getElementById("brv");
 
-var inputs = document.querySelectorAll("input");
+let inputs = document.querySelectorAll("input");
 
-var cssPre = document.getElementById("cssPre");
+let cssPre = document.getElementById("cssPre");
 for(let input of inputs){
     input.onchange = function(){
         previewDiv.style.borderTopLeftRadius = tlh.value + "px " + tlv.value + "px";
@@ -30,7 +30,7 @@ for(let input of inputs){
     }
 }
 
-var copyButton = document.getElementById("copy");
+const copyButton = document.getElementById("copyButton");
 copyButton.onclick = function(){
     navigator.clipboard.writeText(cssPre.innerHTML);
     alert("CSS code is copied to clipboard.");
