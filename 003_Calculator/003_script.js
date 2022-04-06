@@ -1,16 +1,16 @@
-var exp = document.getElementById("exp");
-var nums = document.querySelectorAll(".num");
-var ac = document.getElementById("ac");
-var c = document.getElementById("c");
-var equal = document.getElementById("equal");
-var add = document.getElementById("add");
-var sub = document.getElementById("sub");
-var mul = document.getElementById("mul");
-var div = document.getElementById("div");
-var sign = document.getElementById("sign");
-var point = document.getElementById("point");
+let display = document.getElementById("display");
+const nums = document.querySelectorAll(".button.num");
+const allClearButton = document.getElementById("allClearButton");
+const clearButton = document.getElementById("clearButton");
+const equalButton = document.getElementById("equalButton");
+const addButton = document.getElementById("addButton");
+const subButton = document.getElementById("subButton");
+const mulButton = document.getElementById("mulButton");
+const divButton = document.getElementById("divButton");
+const signChangeButton = document.getElementById("signChangeButton");
+const pointButton = document.getElementById("pointButton");
 
-var operand1, operand2, operator, result, isFloat;
+let operand1, operand2, operator, result, isFloat;
 operand1 = operand2 = operator = result = "";
 isFloat = false;
 
@@ -23,40 +23,46 @@ for(var i = 0; i<nums.length; i++){
     }
 }
 
-ac.onclick = allClear;
-c.onclick = clear;
+allClearButton.onclick = allClear;
+
+clearButton.onclick = clear;
+
 equal.onclick = calculate;
-add.onclick = function(){
+
+addButton.onclick = function(){
     if(operand1 != "")
         operator = "+";
     isFloat = false;
 };
-sub.onclick = function(){
+
+subButton.onclick = function(){
     if(operand1 != "")
         operator = "-";
     isFloat = false;
 };
-mul.onclick = function(){
+
+mulButton.onclick = function(){
     if(operand1 != "")
         operator = "*";
     isFloat = false;
 };
-div.onclick = function(){
+divButton.onclick = function(){
     if(operand1 != "")
         operator = "/";
     isFloat = false;
 };
-sign.onclick = function(){
+
+signChangeButton.onclick = function(){
     if(operand2 == ""){
         operand1 = 0 - operand1;
-        exp.value = operand1;
+        display.value = operand1;
     }
     else{
         operand2 = 0 - operand2;
-        exp.value = operand2;
-    }  
+        display.value = operand2;
+    }
 }
-point.onclick = function(){
+pointButton.onclick = function(){
     if(!isFloat){
         if(operator == ""){
             if(operand1 == "")
@@ -78,26 +84,26 @@ function setOperand1(obj){
     if(operand1.length >= 8){
         return;
     }
-    if(obj == "0" && exp.value == "0")
+    if(obj == "0" && display.value == "0")
         return;
     operand1 += obj;
-    exp.value = operand1;
+    display.value = operand1;
 }
 
 function setOperand2(obj){
-    exp.value = "";
+    display.value = "";
     if(operand2.length >= 8){
         return;
     }
     if(obj == "0" && operand2 == "0")
         return;
     operand2 += obj;
-    exp.value = operand2;
+    display.value = operand2;
 }
 
 function allClear(){
     operand1 = operand2 = operator = "";
-    exp.value = 0;
+    display.value = 0;
     isFloat = false;
 }
 
@@ -106,7 +112,7 @@ function clear(){
         operand1 = "";
     else
         operand2 = "";
-    exp.value = 0;
+    display.value = 0;
     isFloat = false;
 }
 
@@ -125,8 +131,8 @@ function calculate(){
             result = parseFloat(operand1) / parseFloat(operand2);
             break;
     }
-    exp.value = parseFloat(result.toPrecision(3));
-    result = exp.value;
+    display.value = parseFloat(result.toPrecision(3));
+    result = display.value;
     operand1 = result;
     operator = "";
     operand2 = "";
