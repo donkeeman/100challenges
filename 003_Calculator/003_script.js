@@ -1,4 +1,5 @@
 let display = document.getElementById("displaySection");
+const buttons = document.querySelectorAll(".button");
 const nums = document.querySelectorAll(".button.num");
 const allClearButton = document.getElementById("allClearButton");
 const clearButton = document.getElementById("clearButton");
@@ -13,6 +14,7 @@ const pointButton = document.getElementById("pointButton");
 let operand1, operand2, operator, result, isFloat;
 operand1 = operand2 = operator = result = "";
 isFloat = false;
+
 
 for(var i = 0; i<nums.length; i++){
     nums[i].onclick = function(){
