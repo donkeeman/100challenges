@@ -1,4 +1,4 @@
-let display = document.getElementById("display");
+let display = document.getElementById("displaySection");
 const nums = document.querySelectorAll(".button.num");
 const allClearButton = document.getElementById("allClearButton");
 const clearButton = document.getElementById("clearButton");
@@ -27,7 +27,7 @@ allClearButton.onclick = allClear;
 
 clearButton.onclick = clear;
 
-equal.onclick = calculate;
+equalButton.onclick = calculate;
 
 addButton.onclick = function(){
     if(operand1 != "")
@@ -55,11 +55,11 @@ divButton.onclick = function(){
 signChangeButton.onclick = function(){
     if(operand2 == ""){
         operand1 = 0 - operand1;
-        display.value = operand1;
+        displaySection.value = operand1;
     }
     else{
         operand2 = 0 - operand2;
-        display.value = operand2;
+        displaySection.value = operand2;
     }
 }
 pointButton.onclick = function(){
@@ -84,26 +84,26 @@ function setOperand1(obj){
     if(operand1.length >= 8){
         return;
     }
-    if(obj == "0" && display.value == "0")
+    if(obj == "0" && displaySection.value == "0")
         return;
     operand1 += obj;
-    display.value = operand1;
+    displaySection.value = operand1;
 }
 
 function setOperand2(obj){
-    display.value = "";
+    displaySection.value = "";
     if(operand2.length >= 8){
         return;
     }
     if(obj == "0" && operand2 == "0")
         return;
     operand2 += obj;
-    display.value = operand2;
+    displaySection.value = operand2;
 }
 
 function allClear(){
     operand1 = operand2 = operator = "";
-    display.value = 0;
+    displaySection.value = "0";
     isFloat = false;
 }
 
@@ -112,7 +112,7 @@ function clear(){
         operand1 = "";
     else
         operand2 = "";
-    display.value = 0;
+    displaySection.value = "0";
     isFloat = false;
 }
 
@@ -132,7 +132,7 @@ function calculate(){
             break;
     }
     display.value = parseFloat(result.toPrecision(3));
-    result = display.value;
+    result = displaySection.value;
     operand1 = result;
     operator = "";
     operand2 = "";

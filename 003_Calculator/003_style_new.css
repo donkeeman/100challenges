@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
 
+/* reset css */
+
 body, div, h1{
     margin: 0;
     padding: 0;
@@ -21,6 +23,19 @@ body{
     font-weight: bold;
 }
 
+button:hover{
+    background-color: inherit;
+}
+
+/* design */
+
+button{
+    box-sizing: border-box;
+}
+
+button:hover{
+    border: 5px groove gray;
+}
 
 .calculator{
     width: fit-content;
