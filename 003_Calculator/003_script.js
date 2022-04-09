@@ -18,6 +18,10 @@ isFloat = false;
 
 for(var i = 0; i<nums.length; i++){
     nums[i].onclick = function(){
+        if(result != ""){
+            result = "";
+            displaySection.value = "";
+        }
         if(operator == "")
             setOperand1(this.innerHTML);
         else
@@ -133,10 +137,11 @@ function calculate(){
             result = parseFloat(operand1) / parseFloat(operand2);
             break;
     }
-    display.value = parseFloat(result.toPrecision(3));
+    displaySection.value = parseFloat(result.toPrecision(3));
     result = displaySection.value;
     operand1 = result;
     operator = "";
     operand2 = "";
+    result = "";
     isFloat = false;
 }
