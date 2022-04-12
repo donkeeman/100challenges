@@ -3,7 +3,7 @@ var shinyColors = ['indianred', 'darkorange', 'yellow', 'limegreen', 'skyblue', 
 var intervalId;
 var circles = document.querySelectorAll(".circle");
 var time;
-var controlButton = document.getElementById("control");
+var controlButton = document.getElementById("controlButton");
 var intervalID;
 var start = false;
 var change = false;
@@ -16,7 +16,7 @@ controlButton.onclick = function(){
     if(start == false){
         light();
         controlButton.innerHTML = "Stop";
-        time = document.getElementById("time");
+        time = document.getElementById("timeInput");
         intervalID = setInterval(light, parseFloat(time.value)*1000);
         start = true;
     }

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link href="004_style.css", type="text/css", rel="stylesheet">
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="004_style.css" type="text/css" rel="stylesheet">
         <script src="004_script.js" defer></script>
         <title>Christmas Lights</title>
     </head>
     <body>
-        <header>
-            <h2>Christmas Lights</h2>
-            <hr>
-        </header>
         <section>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <br>
-            interval(seconds) <input type="number", id="time", value="1">
-            <button id="control">Start</button>
+            <h1>Christmas Lights</h1>
+            <div class="lights">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div>
+                <span>interval(seconds) </span><input type="number" id="timeInput" value="1">
+                <button id="controlButton">Start</button>
+            </div>
         </section>
     </body>
 </html>
